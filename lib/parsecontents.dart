@@ -53,6 +53,11 @@ getContent(contentType, [chapterNumber=0, paragraphNumber=0]) {
     }
     break;
 
+    case BookContent.playstoreURL: {
+      content = parsedJson['playstoreURL'];
+    }
+    break;
+
     case BookContent.numberOfChapters: {
       int i = parsedJson['chapters'].length;
       content = i.toString();
@@ -76,7 +81,7 @@ getContent(contentType, [chapterNumber=0, paragraphNumber=0]) {
     break;
 
     case BookContent.chapterImage: {
-      content = content = parsedJson['chapters'][chapterNumber]['chapterImage'];
+      content = parsedJson['chapters'][chapterNumber]['chapterImage'];
     }
     break;
   }

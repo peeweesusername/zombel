@@ -6,6 +6,7 @@ enum BookContent {
   author,
   copyright,
   coverart,
+  playstoreURL,
   numberOfChapters,
   chapterTitle,
   numberOfParagraphs,

@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:url_launcher/link.dart';
 import './emums.dart';
 import './globals.dart';
 import './format.dart';
@@ -33,6 +32,11 @@ List<Widget> buildChapters(int count, List<GlobalKey> headLineKeyList) {
       page.add(
           Image(image: AssetImage(getContent(BookContent.chapterImage, i)))
       );
+    }
+
+    if (getContent(BookContent.chapterTitle, i) == 'Stay Tuned....') {
+      print(getContent(BookContent.playstoreURL, i));
+      page.add(getURLLauncher(getContent(BookContent.playstoreURL, i)));
     }
 
     chapters.add(SingleChildScrollView(
@@ -92,7 +96,7 @@ getCoverPage() {
   );
 
   page.add(Center(
-      child: Text('\u00a9 ' + copyright,
+      child: Text('\u00A9 ' + copyright,
               textAlign: TextAlign.center,
               style: const TextStyle(
               fontSize: 10,
@@ -100,4 +104,18 @@ getCoverPage() {
               fontWeight: FontWeight.bold))));
 
   return page;
+}
+
+getURLLauncher(String mylink){
+  return Link(
+    uri: Uri.parse(mylink),
+    target: LinkTarget.blank,
+    builder: (BuildContext ctx, FollowLink? openLink) {
+      return TextButton.icon(
+        onPressed: openLink,
+        label: const Text('Check for updates here'),
+        icon: const Icon(Icons.link),
+      );
+      },
+  );
 }
