@@ -18,11 +18,7 @@ class Headline1 extends StatelessWidget {
     );
   }
 }
-/*
-class Headline2 extends StatelessWidget {
-  const Headline2({Key? key, required this.headline2}) : super(key: key);
-  final String headline2;
- */
+
 class Headline2 extends StatelessWidget {
   final String headline2;
   const Headline2({Key? key, required this.headline2}) : super(key: key);
@@ -51,7 +47,7 @@ class Paragraph extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(bottom: 10, left: 20, right: 20),
       child: Text(
         content,
         style: const TextStyle(

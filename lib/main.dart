@@ -42,7 +42,7 @@ class _MyStory extends State<MyStory> {
 
     setState(() {
       gNumberOfChapters = getNumberofChapters();
-      for(int i=0; i<gNumberOfChapters; i++) {
+      for (int i = 0; i < gNumberOfChapters; i++) {
         int n = getNumberofParagraphs(i);
         gNumberOfParagraphs.add(n);
       }
@@ -57,24 +57,26 @@ class _MyStory extends State<MyStory> {
 
   @override
   Widget build(BuildContext context) {
-    var headLineKeyList = [for (var i = 1; i <= gNumberOfChapters; i++) GlobalKey()];
+    List<GlobalKey> headLineKeyList = List<GlobalKey>.empty(growable: true);
+
+    for (int i = 0; i < gNumberOfChapters; i++) {
+      headLineKeyList.add(GlobalKey());
+    }
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF41407C),
-        title: Text(getContent(BookContent.bookTitle)),
-      ),
-      endDrawer: ToC(gNumberOfChapters, headLineKeyList),
-      body: SingleChildScrollView(
-        controller: _scrollController,
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: buildChapters(gNumberOfChapters, headLineKeyList)
-          ),
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+              appBar: AppBar(
+                backgroundColor: const Color(0xFF41407C),
+                title: Text(getContent(BookContent.bookTitle)),
+              ),
+              //Global keys not working with page views.
+              //Disable for now.
+              //endDrawer: ToC(gNumberOfChapters, headLineKeyList),
+              body: Center(
+                child: PageView(
+                  children:
+                    buildChapters(gNumberOfChapters, headLineKeyList),
+                  )
+                ),
+              );
   }
 }
