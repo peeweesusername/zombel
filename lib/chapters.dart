@@ -28,6 +28,13 @@ List<Widget> buildChapters(int count, List<GlobalKey> headLineKeyList) {
       page.add(
           Paragraph(content: getContent(BookContent.chapterContent, i, j)));
     }
+
+    if (getContent(BookContent.chapterImage, i) != 'noimage'){
+      page.add(
+          Image(image: AssetImage(getContent(BookContent.chapterImage, i)))
+      );
+    }
+
     chapters.add(SingleChildScrollView(
       child: Column(children: page),
       controller: ScrollController(keepScrollOffset: true),

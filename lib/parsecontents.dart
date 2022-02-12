@@ -74,6 +74,11 @@ getContent(contentType, [chapterNumber=0, paragraphNumber=0]) {
       content = parsedJson['chapters'][chapterNumber]['paragraphs'][paragraphNumber]['paragraph'];
     }
     break;
+
+    case BookContent.chapterImage: {
+      content = content = parsedJson['chapters'][chapterNumber]['chapterImage'];
+    }
+    break;
   }
   return content;
 }

@@ -9,5 +9,6 @@ enum BookContent {
   numberOfChapters,
   chapterTitle,
   numberOfParagraphs,
-  chapterContent
+  chapterContent,
+  chapterImage,
 }

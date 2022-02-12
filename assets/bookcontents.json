@@ -11,7 +11,8 @@
         {
           "paragraph" : "My name is Lucy. I work at Kennedy Space Center. My job is to monitor  the rocket launches. Speaking of rocket launches. One launched off today. I remember it fading away into space. It was amazing."
         }
-      ]
+      ],
+      "chapterImage" : "assets/chapter01.jpg"
     },
     {
       "chapterTitle" : "Tuesday, November 2nd, 2020",
@@ -22,7 +23,13 @@
         {
           "paragraph" : "5 PM: I don’t know what happened. The space station said that their crew-mates attacked them and bit them one by one. I just got a notification that the emergency capsule has launched on automated mode not manual mode."
         }
-      ]
+      ],
+      "chapterImage" : "noimage"
+    },
+    {
+      "chapterTitle" : "Stay Tuned....",
+      "paragraphs" : [],
+      "chapterImage" : "noimage"
     }
   ]
 }
