@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:upgrader/upgrader.dart';
 import './emums.dart';
 import './globals.dart';
 import './parsecontents.dart';
@@ -60,24 +62,53 @@ class _MyStory extends State<MyStory> {
   Widget build(BuildContext context) {
     List<GlobalKey> headLineKeyList = List<GlobalKey>.empty(growable: true);
 
+    if (kDebugMode) {
+      Upgrader().clearSavedSettings();
+    }
+
     for (int i = 0; i < gNumberOfChapters; i++) {
       headLineKeyList.add(GlobalKey());
     }
 
     return Scaffold(
-              appBar: AppBar(
-                backgroundColor: const Color(0xFF41407C),
-                title: Text(getContent(BookContent.bookTitle)),
-              ),
-              //Global keys not working with page views.
-              //Disable for now.
-              //endDrawer: ToC(gNumberOfChapters, headLineKeyList),
-              body: Center(
-                child: PageView(
-                  children:
-                    buildChapters(gNumberOfChapters, headLineKeyList),
-                  )
-                ),
-              );
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF41407C),
+        title: Text(getContent(BookContent.bookTitle)),
+      ),
+      //Global keys not working with page views.
+      //Disable for now.
+      //endDrawer: ToC(gNumberOfChapters, headLineKeyList),
+      body: UpgradeAlert(
+        messages:myUpgraderMessages(),
+        showIgnore: false,
+        child: Center(
+            child: PageView(
+                children: buildChapters(gNumberOfChapters, headLineKeyList),
+        )),
+      ),
+    );
+  }
+}
+
+class myUpgraderMessages extends UpgraderMessages {
+  /// Override the message function to provide custom language localization.
+  @override
+  String? message(UpgraderMessage messageKey) {
+      switch (messageKey) {
+        case UpgraderMessage.body:
+          return 'New log entries for The First Ever Zombel are available!';
+        case UpgraderMessage.buttonTitleIgnore:
+          return 'Ignore';
+        case UpgraderMessage.buttonTitleLater:
+          return 'Later';
+        case UpgraderMessage.buttonTitleUpdate:
+          return 'Update Now';
+        case UpgraderMessage.prompt:
+          return 'Happy Reading';
+        case UpgraderMessage.title:
+          return 'New Log Entries';
+      }
+    // Messages that are not provided above can still use the default values.
+    return super.message(messageKey);
   }
 }
