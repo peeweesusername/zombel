@@ -25,13 +25,13 @@
           "paragraph" : "5 PM: I don’t know what happened. The space station said that their crew-mates attacked them and bit them one by one. I just got a notification that the emergency capsule has launched on automated mode not manual mode."
         }
       ],
-      "chapterImage" : "noimage"
+      "chapterImage" : "assets/chapter02.jpg"
     },
     {
       "chapterTitle" : "Wednesday,November 3rd,2020",
       "paragraphs" : [
         {
-          "paragraph" : "I dispatched a team to get the emergency capsule out of the ocean by using a helicopter to rescue the team."
+          "paragraph" : "I dispatched a team to get the emergency capsule out of the ocean by using a helicopter to rescue the crew."
         },
         {
           "paragraph" : "1 PM: It's been 1 hour.  The crew should be there right now picking up the emergency capsule and everyone inside of it."
