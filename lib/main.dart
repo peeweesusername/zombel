@@ -59,15 +59,10 @@ class _MyStory extends State<MyStory> {
 
   @override
   Widget build(BuildContext context) {
-    List<GlobalKey> headLineKeyList = List<GlobalKey>.empty(growable: true);
     PageController _pageController = PageController();
 
     if (kDebugMode) {
       Upgrader().clearSavedSettings();
-    }
-
-    for (int i = 0; i < gNumberOfChapters; i++) {
-      headLineKeyList.add(GlobalKey());
     }
 
     return Scaffold(
