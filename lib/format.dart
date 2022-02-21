@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Headline1 extends StatelessWidget {
-  const Headline1({Key? key, required this.headline1}) : super(key: key);
+  const Headline1({required this.headline1});
   final String headline1;
 
   @override
@@ -20,8 +20,8 @@ class Headline1 extends StatelessWidget {
 }
 
 class Headline2 extends StatelessWidget {
+  const Headline2({required this.headline2});
   final String headline2;
-  const Headline2({Key? key, required this.headline2}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +42,9 @@ class Headline2 extends StatelessWidget {
 }
 
 class Paragraph extends StatelessWidget {
-  const Paragraph({Key? key, required this.content}) : super(key: key);
+  const Paragraph({required this.content});
   final String content;
+
   @override
   Widget build(BuildContext context) {
     return Container(
