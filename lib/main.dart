@@ -96,7 +96,7 @@ class myUpgraderMessages extends UpgraderMessages {
   String? message(UpgraderMessage messageKey) {
       switch (messageKey) {
         case UpgraderMessage.body:
-          return 'New log entries for The First Ever Zombel are available!';
+          return 'New content available for The First Ever Zombel!';
         case UpgraderMessage.buttonTitleIgnore:
           return 'Ignore';
         case UpgraderMessage.buttonTitleLater:
@@ -104,9 +104,9 @@ class myUpgraderMessages extends UpgraderMessages {
         case UpgraderMessage.buttonTitleUpdate:
           return 'Update Now';
         case UpgraderMessage.prompt:
-          return 'Happy Reading';
+          return 'Enjoy The Zombie Apocalypse';
         case UpgraderMessage.title:
-          return 'New Log Entries';
+          return 'New Content';
       }
     // Messages that are not provided above can still use the default values.
     return super.message(messageKey);
