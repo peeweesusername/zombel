@@ -28,6 +28,21 @@
       "chapterImage" : "assets/chapter02.jpg"
     },
     {
+      "chapterTitle" : "Wednesday,November 3rd,2020",
+      "paragraphs" : [
+        {
+          "paragraph" : "I dispatched a team to get the emergency capsule out of the ocean by using a helicopter to rescue the crew."
+        },
+        {
+          "paragraph" : "1 PM: It's been 1 hour.  The rescue team should be there right now picking up the emergency capsule and the crew inside of it."
+        },
+        {
+          "paragraph" : "4 PM: The rescue team just returned. They say that the crew in the capsule were hostile and they did not respond to any commands. They just kept running and attacking and biting."
+        }
+      ],
+      "chapterImage" : "noimage"
+    },
+    {
       "chapterTitle" : "Stay Tuned....",
       "paragraphs" : [],
       "chapterImage" : "noimage"
