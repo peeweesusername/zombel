@@ -5,7 +5,7 @@ import './globals.dart';
 import './format.dart';
 import './parsecontents.dart';
 
-List<Widget> buildChapters(int count, List<GlobalKey> headLineKeyList) {
+List<Widget> buildChapters(int count) {
   List<Widget> chapters = List<Widget>.empty(growable: true);
 
   chapters.add(Container (
@@ -21,7 +21,6 @@ List<Widget> buildChapters(int count, List<GlobalKey> headLineKeyList) {
   for (int i = 0; i < count; i++) {
     List<Widget> page = List<Widget>.empty(growable: true);
     page.add(Headline2(
-        key: headLineKeyList[i],
         headline2: getContent(BookContent.chapterTitle, i)));
     for (int j = 0; j < gNumberOfParagraphs[i]; j++) {
       page.add(

@@ -38,7 +38,6 @@ class MyStory extends StatefulWidget {
 }
 
 class _MyStory extends State<MyStory> {
-  final ScrollController _scrollController = ScrollController();
 
   getCounts() async {
     gFileText = await rootBundle.loadString('assets/bookcontents.json');
@@ -60,14 +59,10 @@ class _MyStory extends State<MyStory> {
 
   @override
   Widget build(BuildContext context) {
-    List<GlobalKey> headLineKeyList = List<GlobalKey>.empty(growable: true);
+    PageController _pageController = PageController();
 
     if (kDebugMode) {
       Upgrader().clearSavedSettings();
-    }
-
-    for (int i = 0; i < gNumberOfChapters; i++) {
-      headLineKeyList.add(GlobalKey());
     }
 
     return Scaffold(
@@ -75,15 +70,14 @@ class _MyStory extends State<MyStory> {
         backgroundColor: const Color(0xFF41407C),
         title: Text(getContent(BookContent.bookTitle)),
       ),
-      //Global keys not working with page views.
-      //Disable for now.
-      //endDrawer: ToC(gNumberOfChapters, headLineKeyList),
+      endDrawer: ToC(gNumberOfChapters, _pageController),
       body: UpgradeAlert(
         messages:myUpgraderMessages(),
         showIgnore: false,
         child: Center(
             child: PageView(
-                children: buildChapters(gNumberOfChapters, headLineKeyList),
+              controller: _pageController,
+              children: buildChapters(gNumberOfChapters),
         )),
       ),
     );
@@ -91,12 +85,11 @@ class _MyStory extends State<MyStory> {
 }
 
 class myUpgraderMessages extends UpgraderMessages {
-  /// Override the message function to provide custom language localization.
   @override
   String? message(UpgraderMessage messageKey) {
       switch (messageKey) {
         case UpgraderMessage.body:
-          return 'New log entries for The First Ever Zombel are available!';
+          return 'New content available for The First Ever Zombel!';
         case UpgraderMessage.buttonTitleIgnore:
           return 'Ignore';
         case UpgraderMessage.buttonTitleLater:
@@ -104,11 +97,9 @@ class myUpgraderMessages extends UpgraderMessages {
         case UpgraderMessage.buttonTitleUpdate:
           return 'Update Now';
         case UpgraderMessage.prompt:
-          return 'Happy Reading';
+          return 'Enjoy The Zombie Apocalypse';
         case UpgraderMessage.title:
-          return 'New Log Entries';
+          return 'New Content';
       }
-    // Messages that are not provided above can still use the default values.
-    return super.message(messageKey);
   }
 }
