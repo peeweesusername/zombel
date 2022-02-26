@@ -13,7 +13,7 @@ To build:
    - flutter pub get
    - flutter pub run flutter_launcher_icons:main
 6) Launch emuldate phone via AVD or connect phone via USB for debugging
-7)  Click the green run button
+7) Click the green run button
 
 Note:
 
