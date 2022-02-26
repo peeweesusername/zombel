@@ -14,6 +14,6 @@ To build:
    flutter pub run flutter_launcher_icons:main
 6) Click the green run button
 
-Note: For the package flutter_launcher_icons 0.9.2 you might have to edit  flutter\.pub-cache\hosted\pub.dartlang.org\flutter_launcher_icons-0.9.2\lib as follows:
+Note: For the package flutter_launcher_icons 0.9.2 you might have to edit flutter\.pub-cache\hosted\pub.dartlang.org\flutter_launcher_icons-0.9.2\lib as follows:
 -const String androidGradleFile = 'android/app/build.gradle';
 +const String androidGradleFile = 'android/local.properties';
