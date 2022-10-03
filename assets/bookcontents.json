@@ -43,8 +43,66 @@
       "chapterImage" : "assets/chapter03.jpg"
     },
     {
-      "chapterTitle" : "Stay Tuned....",
-      "paragraphs" : [],
+      "chapterTitle" : "Thursday, November 4th, 2020",
+      "paragraphs" : [
+        {
+          "paragraph" : "We have all the astronauts except one, Commander Jim Nelson.  He is on the  loose and we need to get him back.  The rest of them are contained but the rescue crew are hurt.  Some are even bitten.  They say that the astronauts bit them.  I’m sending a medic to help them right now."
+        },
+        {
+          "paragraph" : "11 AM: The loose astronaut is in Brevard County in central Florida.  He is infecting people and transforming them into hostile creatures.  That’s why I am putting a full lockdown on Kennedy Space Center."
+        }
+      ],
+      "chapterImage" : "assets/chapter04.jpg"
+    },
+    {
+      "chapterTitle" : "Friday, November 5th, 2020",
+      "paragraphs" : [
+        {
+          "paragraph" : "We are tracking the loose astronaut, Commander Nelson.  I’m in the air over Brevard County."
+        },
+        {
+          "paragraph" : "“I can see him”.  “Go in for a landing”  “Alright, focus the net on Commander Nelson”.  “Shoot!”."
+        },
+        {
+          "paragraph": "We caught the Commander and he is trying to bite us.  But why?"
+        }
+      ],
+      "chapterImage" : "noimage"
+    },
+    {
+    "chapterTitle" : "Saturday, November 6th, 2020",
+    "paragraphs" : [
+      {
+        "paragraph" : "I found out what those things are.  They’re Zombies!  I stayed up all night researching.  Look, I have papers that prove this!"
+      }
+    ],
+    "chapterImage" : "noimage"
+    },
+    {
+      "chapterTitle" : "Thursday, November 11th, 2020",
+      "paragraphs" : [
+        {
+          "paragraph" : "It has been five days and I figured out the cure for the zombie virus.  But the bad thing is you have to drink it for it to work.  So I will go and try to give it to Commander Nelson. Hell help us if the antidote doesn’t work.  I only have one dose.  I have to make the cure work so everyone can have it."
+        },
+        {
+          "paragraph" : "Noon: I gave the antidote to Commander Nelson but I got bit in the process.  The Commander is OK, fully recovered.  I am feeling the virus in me, I don’t have long.  The Commander is processing more doses.  Enough for everyone else who is infected."
+        }
+      ],
+      "chapterImage" : "noimage"
+    },
+    {
+      "chapterTitle" : "Six Months Later",
+      "paragraphs" : [
+        {
+          "paragraph" : "I’ve retired and I’m now living in Key West.  It’s been 6 months since the zombie outbreak.  The zombies destroyed hotels, restaurants, houses and even more.  So now we are trying to rebuild the economy."
+        },
+        {
+          "paragraph" : "Some construction workers nearby said they heard noises and moaning coming from one of the hotel rooms they were rebuilding.  The crew is going to check it out."
+        },
+        {
+          "paragraph" : "I’ve got a bad feeling about this."
+        }
+      ],
       "chapterImage" : "noimage"
     }
   ]
